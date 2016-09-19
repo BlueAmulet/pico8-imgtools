@@ -1,0 +1,5 @@
+*.o
+p8relabel
+p8split
+lodepng.c
+lodepng.h
