@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Os
 
-all: p8relabel p8split
+all: p8relabel p8split p8convert
 
 lodepng.c:
 	@echo "Downloading lodepng from GitHub ..."
@@ -14,7 +14,10 @@ p8relabel: p8relabel.c lodepng.c
 p8split: p8split.c lodepng.c
 	$(CC) -o p8split p8split.c lodepng.c
 
+p8convert: p8convert.c lodepng.c
+	$(CC) -o p8convert p8convert.c lodepng.c
+
 .PHONY: clean
 
 clean:
-	rm -f p8relabel p8split lodepng.c lodepng.h
+	rm -f p8relabel p8split p8convert lodepng.c lodepng.h
