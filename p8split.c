@@ -23,12 +23,12 @@ int main(int argc, char** argv) {
 		printf("Usage: %s cart.png code.png label.png\n", argv[0]);
 		return 1;
 	}
-	unsigned char* code_image = malloc(160*205*4);
+	code_image = malloc(160*205*4);
 	if (code_image == NULL) {
 		printf("error: could not allocate memory\n");
 		exit(1);
 	}
-	unsigned char* label_image = malloc(160*205*4);
+	label_image = malloc(160*205*4);
 	if (label_image == NULL) {
 		free(code_image);
 		printf("error: could not allocate memory\n");

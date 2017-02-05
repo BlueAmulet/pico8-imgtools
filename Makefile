@@ -12,7 +12,7 @@ p8relabel: p8relabel.c lodepng.c
 	$(CC) -o p8relabel p8relabel.c lodepng.c
 
 p8split: p8split.c lodepng.c
-	$(CC) -o p8split p8relabel.c lodepng.c
+	$(CC) -o p8split p8split.c lodepng.c
 
 .PHONY: clean
 
